@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platillos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container-gen">
+
+    <div class= "container-cards" id="container-platillos"></div>
+
+    <div class="container-form">
+    <form id ="form-platillos" onsubmit="return validaForm()">
+        <label for="nombre">Nombre platillo</label>
+        <input type="text" placeholder="Nombre del platillo" id="nombre">
+
+        <label for="precio">Precio</label>
+        <input type="number" id = "precio" step="0.01" min="0" placeholder="Precio platillo" >
+
+        <label for="descripcion"> Descripcion</label>
+        <textarea id="descripcion" rows="3" placeholder="Descripcion del platillo" ></textarea>
+
+        <label for="categoria">Categoria</label>
+        <select name="categ" id="categoria"  class="custom-select" >
+            <option value = ""></option>
+            <option value = "Hamburguesa">Hamburguesa</option>
+            <option value = "Hot Gogs">Hot Gogs</option>
+            <option value = "Snacks">Snacks</option>
+            <option value = "Bebidas">Bebidas</option>
+            <option value = "Otros">Otros</option>
+        </select>
+        
+
+        <label for="ingredientes" >Ingredientes</label>
+        <input type ="text" id="ingredientes" placeholder="Ingredientes del platillo" >
+
+        <button id="btn-guardar" >Guardar</button>
+    </form>
+    </div>
+
+</div>
+
+<script type="module" src="./app.js"></script>
+
+</body>
+</html>
